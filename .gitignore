@@ -1,0 +1,16 @@
+*.py[co]
+
+*.log
+*.pyc
+*.spec
+
+# Packages
+venv
+dist
+build
+tests/report/
+*.egg-info/
+
+.idea
+.DS_Store
+Thumbs.db
