@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='xiaoaitts',
-    version='0.0.2',
+    version='0.1.0',
     author='Max',
     author_email='mr.qchao@gmail.com',
     description='小爱音箱自定义文本朗读',
