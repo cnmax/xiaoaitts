@@ -5,7 +5,7 @@ from functools import lru_cache
 from xiaoaitts.lib.request import request
 
 """
-http://miot-spec.org/miot-spec-v2/instances?status=all
+https://miot-spec.org/miot-spec-v2/instances?status=all
 https://miot-spec.org/miot-spec-v2/instance?type=urn:miot-spec-v2:device:speaker:0000A015:xiaomi-x08c:1
 """
 
@@ -32,7 +32,7 @@ def get_device_spec(type=None):
         except:
             result = None
         if not result:
-            resp = request('http://miot-spec.org/miot-spec-v2/instances?status=all', data={})
+            resp = request('https://miot-spec.org/miot-spec-v2/instances?status=all', data={})
             all = {i['model']: i['type'] for i in resp['instances']}
             with open(path, 'w') as f:
                 json.dump(all, f)
@@ -41,4 +41,4 @@ def get_device_spec(type=None):
             return result
         type = list(result.values())[0]
 
-    return request('http://miot-spec.org/miot-spec-v2/instance?type=' + type, data={})
+    return request('https://miot-spec.org/miot-spec-v2/instance?type=' + type, data={})
