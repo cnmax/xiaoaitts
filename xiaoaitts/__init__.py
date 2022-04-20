@@ -61,7 +61,7 @@ class XiaoAi:
         return self._call(tts, text=text)
 
     def set_volume(self, volume):
-        if isinstance(volume, int):
+        if not isinstance(volume, int):
             raise XiaoAiError(ErrorCode.INVALID_INPUT)
         return self._call(player.set_volume, volume=volume)
 
