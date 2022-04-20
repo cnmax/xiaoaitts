@@ -167,7 +167,5 @@ song_list = client.get_my_playlist('337361232731772372')
 ```
 
 ## 参考链接
-
-- [https://github.com/Yonsm/ZhiMi](https://github.com/Yonsm/ZhiMi)
-- [https://github.com/Yonsm/MiService](https://github.com/Yonsm/MiService)
+- [https://github.com/Yonsm](https://github.com/Yonsm)
 - [https://github.com/vv314/xiaoai-tts](https://github.com/vv314/xiaoai-tts)
