@@ -1,5 +1,6 @@
 import json
 import os
+from functools import lru_cache
 
 from xiaoaitts.lib.request import request
 
@@ -9,6 +10,7 @@ https://miot-spec.org/miot-spec-v2/instance?type=urn:miot-spec-v2:device:speaker
 """
 
 
+@lru_cache(maxsize=None)
 def get_device_spec(type=None):
     if not type or not type.startswith('urn'):
         def get_spec(all):
