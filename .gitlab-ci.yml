@@ -1,0 +1,47 @@
+image: python:3.7-slim
+
+variables:
+  PYPI_TOKEN: $PYPI_TOKEN
+  PYPI_TEST_TOKEN: $PYPI_TEST_TOKEN
+
+cache:
+  paths:
+    - dist
+
+before_script:
+  - python --version
+  - python -m pip install --upgrade pip
+
+build:
+  stage: build
+  before_script:
+    - pip install build
+  script:
+    - python -m build
+  tags:
+    - shared-ci
+  only:
+    - tags
+    - master
+
+upload-pypi:
+  stage: deploy
+  before_script:
+    - pip install twine
+  script:
+    - twine upload -u __token__ -p $PYPI_TOKEN --repository-url https://upload.pypi.org/legacy/ dist/*
+  tags:
+    - shared-ci
+  only:
+    - tags
+
+upload-pypi-test:
+  stage: deploy
+  before_script:
+    - pip install twine
+  script:
+    - twine upload -u __token__ -p $PYPI_TEST_TOKEN --repository-url https://test.pypi.org/legacy/ dist/*
+  tags:
+    - shared-ci
+  only:
+    - master
