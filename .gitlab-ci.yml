@@ -4,6 +4,10 @@ variables:
   PYPI_TOKEN: $PYPI_TOKEN
   PYPI_TEST_TOKEN: $PYPI_TEST_TOKEN
 
+cache:
+  paths:
+    - dist
+
 before_script:
   - python --version
   - python -m pip install --upgrade pip
