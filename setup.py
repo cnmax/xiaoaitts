@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='xiaoaitts',
-    version='0.1.0',
+    version='0.1.1',
     author='Max',
     author_email='mr.qchao@gmail.com',
     description='小爱音箱自定义文本朗读',
@@ -23,6 +23,6 @@ setup(
     packages=find_packages(exclude=('tests', 'tests.*')),
     python_requires='>=3.6',
     install_requires=[
-        'requests~=2.23.0',
+        'requests',
     ]
 )
