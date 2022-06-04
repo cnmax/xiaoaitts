@@ -11,9 +11,9 @@ setup(
     description='小爱音箱自定义文本朗读',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/cnmaxqi/xiaoaitts',
+    url='https://github.com/cnmax/xiaoaitts',
     project_urls={
-        'Bug Tracker': 'https://github.com/cnmaxqi/xiaoaitts/issues',
+        'Bug Tracker': 'https://github.com/cnmax/xiaoaitts/issues',
     },
     classifiers=[
         'Programming Language :: Python :: 3',
