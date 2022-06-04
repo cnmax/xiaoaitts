@@ -1,6 +1,9 @@
 # xiaoaitts
 
 [![PyPI](https://img.shields.io/pypi/v/xiaoaitts.svg)](https://pypi.python.org/pypi/xiaoaitts)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/xiaoaitts)
+![PyPI - License](https://img.shields.io/pypi/l/xiaoaitts)
+![GitHub last commit](https://img.shields.io/github/last-commit/cnmaxqi/xiaoaitts)
 
 小爱音箱自定义文本朗读。
 
